@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 15, 15, 15;
+    --background-end-rgb: 30, 30, 30;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+    min-height: 100vh;
+}
+
+.fire-gradient {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 25%, #ff4444 50%, #cc0000 75%, #8b0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.glow-fire {
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.5), 0 0 40px rgba(249, 115, 22, 0.3);
+}
+
+.score-card {
+    background: linear-gradient(145deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+    border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.input-fire {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(249, 115, 22, 0.5);
+    transition: all 0.3s ease;
+}
+
+.input-fire:focus {
+    border-color: #f97316;
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+    outline: none;
+}
+
+.btn-fire {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #c2410c 100%);
+    transition: all 0.3s ease;
+}
+
+.btn-fire:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4);
+}
